@@ -1,0 +1,50 @@
+.logo > img {
+  width: 100px;
+}
+
+.nav-item > ul {
+  display: flex;
+}
+
+.nav-item > ul > li {
+  margin-left: 40px;
+  font-size: 24px;
+  list-style: none;
+}
+
+.app {
+  border: 1px solid #000;
+  justify-content: space-between;
+  display: flex;
+}
+
+.rescards {
+  background-color: #efe9e9;
+  border: 1px solid #000;
+  width: 210px;
+  height: 350px;
+}
+
+.rescards > img {
+  width: 200px;
+  height: 130px;
+}
+
+.rescontainer {
+  flex-wrap: wrap;
+  display: flex;
+}
+
+.card-new {
+  margin-bottom: 10px;
+  margin-left: 20px;
+}
+
+.shimmer_cards {
+  background-color: #f0f0f0;
+  width: 200px;
+  height: 400px;
+  margin: 20px;
+}
+
+/*# sourceMappingURL=index.9e4c6fd2.css.map */
