@@ -12,6 +12,8 @@ function useRestuarantmenu(resId) {
    setInfo(data_json);
     }
 
+    console.log("jsn_new_data", info);
+
   return info;
 }
 
