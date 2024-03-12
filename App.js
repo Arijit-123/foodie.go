@@ -33,6 +33,7 @@ const [info,setInfo]=useState(null);
 <div id="container">
 <Header/>
 <Outlet/>
+<Grocery/>
 <h1> </h1>
 </div>
 </UserContext.Provider>

@@ -6,19 +6,35 @@ const[data,setData]=useState(null);
     datafetch();
   },[])
   async function datafetch(){
-    const data=await fetch("https://www.bigbasket.com/ui-svc/v2/header?_=1707337154323&send_address_set_by_user=true");
+    const data=await fetch("https://backend.fruive.com/api/v1/001/dashboard");
     const json_data= await data.json();
-setData(json_data);
+setData(json_data?.data?.shop_by_category?.categories);
   }
 
   console.log("niu", data);
   return (
-    <div>
-     <h1> this is grocery page</h1>
-      <input className='border border-black' placeholder='name'>
-      </input>
-      <input placeholder='message' className='border border-black'></input>
-      <button className='bg-gray-200'>Submit</button>
+    <div className='flex flex-wrap items-stretch'>
+
+
+    {
+    data?.map((item)=>(
+    <>
+    <div className='mx-4 my-4'>
+   
+    <div className='border border-black'> <img className='w-72' src={item.image_url}></img>
+    <p className='font font-bold mx-4 my-4'>{item.altTag}</p>
+    </div>
+
+
+    
+    </div>
+    </>
+    ))
+    
+    
+    
+    }
+      
     </div>
   )
 }
