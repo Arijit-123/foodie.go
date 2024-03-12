@@ -3004,11 +3004,16 @@ const Headermain = ()=>{
                             lineNumber: 35,
                             columnNumber: 1
                         }, undefined),
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(Grocery, {}, void 0, false, {
+                            fileName: "App.js",
+                            lineNumber: 36,
+                            columnNumber: 1
+                        }, undefined),
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
                             children: " "
                         }, void 0, false, {
                             fileName: "App.js",
-                            lineNumber: 36,
+                            lineNumber: 37,
                             columnNumber: 1
                         }, undefined)
                     ]
@@ -3036,7 +3041,7 @@ const appRouter = (0, _reactRouterDom.createBrowserRouter)([
         path: "/",
         element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(Headermain, {}, void 0, false, {
             fileName: "App.js",
-            lineNumber: 48,
+            lineNumber: 49,
             columnNumber: 17
         }, undefined),
         children: [
@@ -3044,7 +3049,7 @@ const appRouter = (0, _reactRouterDom.createBrowserRouter)([
                 path: "/",
                 element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _bodyDefault.default), {}, void 0, false, {
                     fileName: "App.js",
-                    lineNumber: 52,
+                    lineNumber: 53,
                     columnNumber: 25
                 }, undefined)
             },
@@ -3052,7 +3057,7 @@ const appRouter = (0, _reactRouterDom.createBrowserRouter)([
                 path: "/about",
                 element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _aboutDefault.default), {}, void 0, false, {
                     fileName: "App.js",
-                    lineNumber: 56,
+                    lineNumber: 57,
                     columnNumber: 21
                 }, undefined)
             },
@@ -3060,7 +3065,7 @@ const appRouter = (0, _reactRouterDom.createBrowserRouter)([
                 path: "/contact",
                 element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _contactDefault.default), {}, void 0, false, {
                     fileName: "App.js",
-                    lineNumber: 60,
+                    lineNumber: 61,
                     columnNumber: 17
                 }, undefined)
             },
@@ -3068,7 +3073,7 @@ const appRouter = (0, _reactRouterDom.createBrowserRouter)([
                 path: "/restaurants/:resId",
                 element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _restuarantmenuDefault.default), {}, void 0, false, {
                     fileName: "App.js",
-                    lineNumber: 65,
+                    lineNumber: 66,
                     columnNumber: 17
                 }, undefined)
             },
@@ -3078,12 +3083,12 @@ const appRouter = (0, _reactRouterDom.createBrowserRouter)([
                     fallback: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _shimmerDefault.default), {}, void 0, false, void 0, void 0),
                     children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(Grocery, {}, void 0, false, {
                         fileName: "App.js",
-                        lineNumber: 69,
+                        lineNumber: 70,
                         columnNumber: 49
                     }, undefined)
                 }, void 0, false, {
                     fileName: "App.js",
-                    lineNumber: 69,
+                    lineNumber: 70,
                     columnNumber: 17
                 }, undefined)
             },
@@ -3091,14 +3096,14 @@ const appRouter = (0, _reactRouterDom.createBrowserRouter)([
                 path: "/cart",
                 element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _cartDefault.default), {}, void 0, false, {
                     fileName: "App.js",
-                    lineNumber: 73,
+                    lineNumber: 74,
                     columnNumber: 17
                 }, undefined)
             }
         ],
         errorElement: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _errorDefault.default), {}, void 0, false, {
             fileName: "App.js",
-            lineNumber: 76,
+            lineNumber: 77,
             columnNumber: 22
         }, undefined)
     }
@@ -3108,7 +3113,7 @@ root.render(/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.RouterP
     router: appRouter
 }, void 0, false, {
     fileName: "App.js",
-    lineNumber: 86,
+    lineNumber: 87,
     columnNumber: 13
 }, undefined));
 var _c, _c1;
@@ -27489,9 +27494,13 @@ parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "img_link", ()=>img_link);
 parcelHelpers.export(exports, "menuapi", ()=>menuapi);
 parcelHelpers.export(exports, "itemlistimg", ()=>itemlistimg);
+parcelHelpers.export(exports, "GROCER_LISTING", ()=>GROCER_LISTING);
+parcelHelpers.export(exports, "GROCER_ITEM_LISTING", ()=>GROCER_ITEM_LISTING);
 const img_link = "https://yt3.googleusercontent.com/ytc/APkrFKYZCFgePdgddcC3uzTAP-lyTmY1-ivKekqxjhs_=s900-c-k-c0x00ffffff-no-rj";
 const menuapi = "https://www.swiggy.com/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=25.5924893&lng=85.13367459999999&restaurantId=";
 const itemlistimg = "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_208,h_208,c_fit/";
+const GROCER_LISTING = "https://backend.fruive.com/api/v1/001/dashboard";
+const GROCER_ITEM_LISTING = "https://backend.fruive.com/api/v1/001/product-list?category_id=61c0f2398952dc068d5a1f09&loc=61c0f17c8952dc068d5a1ee6";
 
 },{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"gkKU3":[function(require,module,exports) {
 exports.interopDefault = function(a) {
@@ -40254,7 +40263,7 @@ $RefreshReg$(_c, "Cart");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","react-redux":"62sf7","./Itemlist":"2tVZ3","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","./util/Cartslice":"kTi5z"}],"lAetZ":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","react-redux":"62sf7","./Itemlist":"2tVZ3","./util/Cartslice":"kTi5z","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"lAetZ":[function(require,module,exports) {
 module.exports = require("7cf60d8ed03dd50")(require("eddc734a7a75326d").getBundleURL("lly8x") + "Grocery.9c424e8a.js" + "?" + Date.now()).catch((err)=>{
     delete module.bundle.cache[module.id];
     throw err;
