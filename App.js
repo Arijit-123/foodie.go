@@ -12,6 +12,7 @@ import { Provider } from "react-redux";
 import appStore from "./src/util/Appstore";
 import Cart from "./src/Cart";
 import UserContext from "./src/util/UserContext";
+import Grocerymenu from "./src/util/Grocerymenu";
 // import Grocery from "./Grocery";
 
 const Grocery=lazy(()=>import("./src/Grocery"));
@@ -33,7 +34,7 @@ const [info,setInfo]=useState(null);
 <div id="container">
 <Header/>
 <Outlet/>
-<Grocery/>
+
 <h1> </h1>
 </div>
 </UserContext.Provider>
@@ -68,6 +69,10 @@ const appRouter=createBrowserRouter([
     {
         path:"/grocery",
         element:<Suspense fallback={<Shimmer/>}><Grocery/></Suspense>
+    },
+    {
+        path: "/groceryinfo/:newid",
+        element:<Grocerymenu/>,
     },
     {
         path:"/cart",

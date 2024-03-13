@@ -9,6 +9,7 @@ function Restuarantmenu() {
 
 const {resId}=useParams();
 const newdata=useRestuarantmenu(resId);
+
 const dispatch = useDispatch();
 const [showitem,setShowitem]=useState(false);
 const [showindex,setShowindex]=useState(null);
