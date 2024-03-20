@@ -40215,7 +40215,13 @@ function Itemlist({ item, comp }) {
                 }, void 0, false)),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
                 className: "text-xl font-bold",
-                children: "Grocery"
+                children: groceryitems.length !== 0 ? /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                    children: "Grocery"
+                }, void 0, false, {
+                    fileName: "src/Itemlist.js",
+                    lineNumber: 70,
+                    columnNumber: 61
+                }, this) : ""
             }, void 0, false, {
                 fileName: "src/Itemlist.js",
                 lineNumber: 70,
@@ -40337,6 +40343,7 @@ exports.default = appStore;
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "additemsgrocery", ()=>additemsgrocery);
+parcelHelpers.export(exports, "cleargroceryCart", ()=>cleargroceryCart);
 var _toolkit = require("@reduxjs/toolkit");
 const groceryslice = (0, _toolkit.createSlice)({
     name: "grocery",
@@ -40346,10 +40353,13 @@ const groceryslice = (0, _toolkit.createSlice)({
     reducers: {
         additemsgrocery: (state, action)=>{
             state.items.push(action.payload);
+        },
+        cleargroceryCart: (state)=>{
+            state.items.length = 0;
         }
     }
 });
-const { additemsgrocery } = groceryslice.actions;
+const { additemsgrocery, cleargroceryCart } = groceryslice.actions;
 exports.default = groceryslice.reducer;
 
 },{"@reduxjs/toolkit":"fuua8","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"52OIH":[function(require,module,exports) {
@@ -40368,6 +40378,7 @@ var _reactRedux = require("react-redux");
 var _itemlist = require("./Itemlist");
 var _itemlistDefault = parcelHelpers.interopDefault(_itemlist);
 var _cartslice = require("./util/Cartslice");
+var _grocerySlice = require("./util/grocerySlice");
 var _s = $RefreshSig$();
 function Cart() {
     _s();
@@ -40375,6 +40386,7 @@ function Cart() {
     const dispatch = (0, _reactRedux.useDispatch)();
     function clearcart() {
         dispatch((0, _cartslice.clearCart)());
+        dispatch((0, _grocerySlice.cleargroceryCart)());
     }
     console.log("itemcart", cartItems);
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -40385,7 +40397,7 @@ function Cart() {
                 children: " Cart"
             }, void 0, false, {
                 fileName: "src/Cart.js",
-                lineNumber: 19,
+                lineNumber: 21,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
@@ -40394,7 +40406,7 @@ function Cart() {
                 children: "Clear Cart"
             }, void 0, false, {
                 fileName: "src/Cart.js",
-                lineNumber: 20,
+                lineNumber: 22,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -40404,18 +40416,18 @@ function Cart() {
                     comp: "cart"
                 }, void 0, false, {
                     fileName: "src/Cart.js",
-                    lineNumber: 22,
+                    lineNumber: 24,
                     columnNumber: 2
                 }, this)
             }, void 0, false, {
                 fileName: "src/Cart.js",
-                lineNumber: 21,
+                lineNumber: 23,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
         fileName: "src/Cart.js",
-        lineNumber: 18,
+        lineNumber: 20,
         columnNumber: 5
     }, this);
 }
@@ -40435,7 +40447,7 @@ $RefreshReg$(_c, "Cart");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","react-redux":"62sf7","./Itemlist":"2tVZ3","./util/Cartslice":"kTi5z","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"6fz4N":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","react-redux":"62sf7","./Itemlist":"2tVZ3","./util/Cartslice":"kTi5z","./util/grocerySlice":"cNShZ","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"6fz4N":[function(require,module,exports) {
 var $parcel$ReactRefreshHelpers$381f = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;

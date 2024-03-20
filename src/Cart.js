@@ -3,6 +3,7 @@ import { UseSelector, useDispatch, useSelector } from 'react-redux'
 import Itemlist from './Itemlist';
 import { UseDispatch } from 'react-redux';
 import { clearCart } from './util/Cartslice';
+import { cleargroceryCart } from './util/grocerySlice';
 function Cart() {
   const cartItems=useSelector((store)=>store.cart.items);
 
@@ -12,6 +13,7 @@ function Cart() {
 const dispatch=useDispatch();
 function clearcart(){
 dispatch(clearCart());
+dispatch(cleargroceryCart());
 }
   console.log("itemcart", cartItems);
   return (

@@ -67,7 +67,7 @@ item.map((res,index)=>
 )
 
       }
-<p className='text-xl font-bold'>Grocery</p>
+<p className='text-xl font-bold'>{groceryitems.length!==0 ? <p>Grocery</p>:""}</p>
       <Grocerylist items={groceryitems}/>
     </div>
   )
