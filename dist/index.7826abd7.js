@@ -35443,6 +35443,7 @@ const Body = ()=>{
                                         children: item.info.avgRating > 4.3 ? /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(Restaurantcardpromoted, {
                                             id: item?.info?.id,
                                             name: item?.info?.name,
+                                            image_url: item.info.cloudinaryImageId,
                                             rating: item.info.avgRatingString,
                                             cost: item.info.costForTwo
                                         }, void 0, false, {
@@ -35452,12 +35453,13 @@ const Body = ()=>{
                                         }, undefined) : /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _restuarantCardDefault.default), {
                                             id: item?.info?.id,
                                             name: item?.info?.name,
+                                            image_url: item.info.cloudinaryImageId,
                                             rating: item.info.avgRatingString,
                                             cost: item.info.costForTwo
                                         }, void 0, false, {
                                             fileName: "src/Body.js",
                                             lineNumber: 53,
-                                            columnNumber: 166
+                                            columnNumber: 206
                                         }, undefined)
                                     }, void 0, false, {
                                         fileName: "src/Body.js",
@@ -35506,14 +35508,15 @@ var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "withpromotedlabel", ()=>withpromotedlabel);
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
-const ResturantCards = ({ id, name, rating, cost })=>{
+const ResturantCards = ({ id, name, image_url, rating, cost })=>{
     const newname = name?.substring(0, 18);
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-        className: "w-[190px] bg-blue-200 ml-5 mb-5 hover:bg-green-100 rounded-lg",
+        className: "w-[190px]  bg-blue-200 ml-5 mb-5 hover:bg-green-100 rounded-lg",
         id: id,
         children: [
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
-                src: "https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=1080/assets/search/usecase/matka_biryani_zdish.png"
+                className: "h-[200px] w-[200px]",
+                src: `https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/${image_url}`
             }, void 0, false, {
                 fileName: "src/RestuarantCard.js",
                 lineNumber: 6,
@@ -35530,9 +35533,7 @@ const ResturantCards = ({ id, name, rating, cost })=>{
                 lineNumber: 7,
                 columnNumber: 5
             }, undefined),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h4", {
-                children: "Biryani"
-            }, void 0, false, {
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h4", {}, void 0, false, {
                 fileName: "src/RestuarantCard.js",
                 lineNumber: 8,
                 columnNumber: 5
@@ -35563,7 +35564,7 @@ const ResturantCards = ({ id, name, rating, cost })=>{
 };
 _c = ResturantCards;
 const withpromotedlabel = (ResturantCards)=>{
-    return ({ id, name, rating, cost })=>{
+    return ({ id, name, image_url, rating, cost })=>{
         return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
             children: [
                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("label", {
@@ -35577,6 +35578,7 @@ const withpromotedlabel = (ResturantCards)=>{
                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(ResturantCards, {
                     id: id,
                     name: name,
+                    image_url: image_url,
                     rating: rating,
                     cost: cost
                 }, void 0, false, {

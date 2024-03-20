@@ -50,7 +50,7 @@ console.log('datanew',data?data:"");
     <>
     <div className="">
  <Link to={"/restaurants/"+item?.info?.id}>
- {item.info.avgRating> 4.3 ? <Restaurantcardpromoted id={item?.info?.id} name={item?.info?.name} rating={item.info.avgRatingString} cost={item.info.costForTwo}/> :  <ResturantCards id={item?.info?.id} name={item?.info?.name} rating={item.info.avgRatingString} cost={item.info.costForTwo}/>}
+ {item.info.avgRating> 4.3 ? <Restaurantcardpromoted id={item?.info?.id} name={item?.info?.name} image_url={item.info.cloudinaryImageId} rating={item.info.avgRatingString} cost={item.info.costForTwo}/> :  <ResturantCards id={item?.info?.id} name={item?.info?.name} image_url={item.info.cloudinaryImageId} rating={item.info.avgRatingString} cost={item.info.costForTwo}/>}
    
     </Link>
 

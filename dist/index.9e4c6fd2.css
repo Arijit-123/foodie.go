@@ -325,6 +325,26 @@ img, video {
   display: flex;
 }
 
+.h-\[\] {
+  height: ;
+}
+
+.h-\[200px\] {
+  height: 200px;
+}
+
+.h-\[190px\] {
+  height: 190px;
+}
+
+.h-6 {
+  height: 1.5rem;
+}
+
+.h-96 {
+  height: 24rem;
+}
+
 .w-28 {
   width: 7rem;
 }
@@ -343,6 +363,14 @@ img, video {
 
 .w-\[190px\] {
   width: 190px;
+}
+
+.w-\[\] {
+  width: ;
+}
+
+.w-\[200px\] {
+  width: 200px;
 }
 
 .flex-wrap {
