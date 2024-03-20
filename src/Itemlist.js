@@ -1,14 +1,18 @@
 import React from 'react'
 import { itemlistimg } from './util/constant';
-import { useDispatch } from 'react-redux';
+import { useDispatch,useSelector } from 'react-redux';
 import React,{useEffect, useState} from 'react';
 import { additems } from './util/Cartslice';
+import Grocerylist from './util/Grocerylist';
 
 
 
 
 
 function Itemlist({item,comp}) {
+
+  const groceryitems=useSelector((store)=>store.grocery.items);
+
   console.log("tim tim",item);
   const dispatch = useDispatch();
 
@@ -54,12 +58,17 @@ item.map((res,index)=>
     <button className='p-2 bg-black text-white shadow-lg absolute m-auto' onClick={()=>additemsnew(item)}>Add +</button>
     </div>
   </div>
+
+
+  
 </>
 
 
 )
 
       }
+<p className='text-xl font-bold'>Grocery</p>
+      <Grocerylist items={groceryitems}/>
     </div>
   )
 }

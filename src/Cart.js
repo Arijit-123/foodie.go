@@ -5,6 +5,10 @@ import { UseDispatch } from 'react-redux';
 import { clearCart } from './util/Cartslice';
 function Cart() {
   const cartItems=useSelector((store)=>store.cart.items);
+
+  
+
+ 
 const dispatch=useDispatch();
 function clearcart(){
 dispatch(clearCart());

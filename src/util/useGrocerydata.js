@@ -17,12 +17,8 @@ function useGrocerydata(newid) {
             console.error('Error fetching data:', error);
         }
     }
-
-    return (
-        <div>
-            {/* Render your data here if needed */}
-        </div>
-    );
+console.log('grocery detail info', data);
+    return data;
 }
 
 export default useGrocerydata;

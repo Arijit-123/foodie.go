@@ -22,7 +22,7 @@ setData(json_data?.data?.shop_by_category?.categories);
     data?.map((item)=>(
     <>
     <Link to={"/groceryinfo/"+item?.category_id}>
-    <Grocerycards item={item}/>
+    <Grocerycards item={item} type="grocery"/>
     </Link>
     </>
     ))
