@@ -35880,11 +35880,11 @@ function Restuarantmenu() {
         lineNumber: 17,
         columnNumber: 14
     }, this);
-    const { name, avgRating } = newdata?.data?.cards[0]?.card?.card?.info;
-    console.log("whole data", newdata?.data?.cards[0]?.card?.card?.info?.name);
-    const { itemCards } = newdata?.data?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards[2]?.card?.card;
-    console.log("newitemcard", newdata?.data?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards);
-    const category_one = newdata?.data?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards.filter((c)=>c.card?.card?.["@type"] == "type.googleapis.com/swiggy.presentation.food.v2.ItemCategory");
+    const { name, avgRating } = newdata?.data?.cards[2]?.card?.card?.info;
+    // console.log("whole data", newdata?.data?.cards[0]?.card?.card?.info?.name);
+    const { itemCards } = newdata?.data?.cards[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards[2]?.card?.card;
+    console.log("newitemcard", newdata?.data?.cards[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards);
+    const category_one = newdata?.data?.cards[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards.filter((c)=>c.card?.card?.["@type"] == "type.googleapis.com/swiggy.presentation.food.v2.ItemCategory");
     console.log("cat", category_one);
     function additemsnew(itemnew) {
         dispatch((0, _cartslice.additems)(itemnew));
